@@ -1,10 +1,23 @@
 package dao;
 
 import model.Product;
+import org.hibernate.SessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+
 public class ProductDaoImpl implements ProductDao {
+
+    private static final Logger logger = LoggerFactory.getLogger(ProductDaoImpl.class);
+
+    private SessionFactory sessionFactory;
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     @Override
     public void addProduct(Product product) {
