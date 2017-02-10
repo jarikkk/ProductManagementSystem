@@ -40,16 +40,26 @@ public class ProductDaoImpl implements ProductDao {
         Product product = session.load(Product.class, new Integer(id));
         if(product != null) {
             session.delete(product);
+
         }
+        logger.info("Product successfully removed. Product details: " + product);
     }
 
     @Override
     public Product getProductId(int id) {
-        return null;
+        Session session = this.sessionFactory.getCurrentSession();
+        Product product = session.load(Product.class, new Integer(id));
+        logger.info("Product successfully loaded. Product details: " + product);
+        return product;
     }
 
     @Override
     public List<Product> listProducts() {
-        return null;
+        Session session = this.sessionFactory.getCurrentSession();
+        List<Product> productList = session.createQuery("from Product").list();
+        for (Product product : productList) {
+            logger.info("Product list: " + product);
+        }
+        return productList;
     }
 }
