@@ -1,16 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: yakovalenko
-  Date: 09.02.2017
-  Time: 15:11
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>$Product Management System$</title>
   </head>
-  <body>
-  $END$
+  <h3>Product Management System presents</h3>
+  </br>
+  <a href="/products" target="_blank">Product list</a>
+  </br>
   </body>
 </html>
