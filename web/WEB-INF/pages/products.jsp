@@ -136,6 +136,19 @@
                     <form:input path="prise"/>
                 </td>
             </tr>
+            <tr>
+                <td colspan="2">
+                    <c:if test="${!empty product.productName}">
+                        <input type="submit"
+                               value="<spring:message text="Edit Product"/>"/>
+                    </c:if>
+                    <c:if test="${empty product.productName}">
+                        <input type="submit"
+                               value="<spring:message text="Add Product"/>"/>
+                    </c:if>
+
+                </td>
+            </tr>
         </table>
     </form:form>
 </c:url>
