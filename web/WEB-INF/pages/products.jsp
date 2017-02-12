@@ -107,7 +107,33 @@
             </c:if>
             <tr>
                 <td>
+                    <form:label path="productName">
+                        <spring:message text="Name"/>
+                    </form:label>
+                </td>
+                <td>
+                    <form:input path="productName"/>
+                </td>
 
+            </tr>
+            <tr>
+                <td>
+                    <form:label path="manufacturer">
+                        <spring:message text="Manufacturer"/>
+                    </form:label>
+                </td>
+                <td>
+                    <form:input path="manufacturer"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form:label path="prise">
+                        <spring:message text="Prise"/>
+                    </form:label>
+                </td>
+                <td>
+                    <form:input path="prise"/>
                 </td>
             </tr>
         </table>
