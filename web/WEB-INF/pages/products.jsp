@@ -84,5 +84,10 @@
     </table>
 </c:if>
 
+<h1>Add a Product to GOODS</h1>
+
+<c:url var="addAction" value="/products/add.form">
+
+</c:url>
 </body>
 </html>
