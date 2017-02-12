@@ -77,8 +77,8 @@
                 <td>${product.productName}</td>
                 <td>${product.manufacturer}</td>
                 <td>${product.prise/100}.${product.prise%100}</td>
-                <td><a href="<c:url value='/edit/${book.id}'/>">">Edit</a> </td>"
-                <td><a href="<c:url value='/remove/${book.id}'/>">">Delete</a> </td>"
+                <td><a href="<c:url value='/edit/${product.id}'/>">">Edit</a> </td>"
+                <td><a href="<c:url value='/remove/${product.id}'/>">">Delete</a> </td>"
             </tr>
         </c:forEach>
     </table>
