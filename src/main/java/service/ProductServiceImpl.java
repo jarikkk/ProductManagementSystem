@@ -19,30 +19,30 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public void addProduct(Product product) {
-
+        this.productDao.addProduct(product);
     }
 
     @Override
     @Transactional
     public void updateProduct(Product product) {
-
+        this.productDao.updateProduct(product);
     }
 
     @Override
     @Transactional
     public void removeProduct(int id) {
-
+        this.productDao.removeProduct(id);
     }
 
     @Override
     @Transactional
     public Product getProductId(int id) {
-        return null;
+        return this.productDao.getProductId(id);
     }
 
     @Override
     @Transactional
     public List<Product> listProducts() {
-        return null;
+        return this.productDao.listProducts();
     }
 }
