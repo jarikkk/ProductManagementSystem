@@ -77,8 +77,10 @@
                 <td>${product.productName}</td>
                 <td>${product.manufacturer}</td>
                 <td>${product.prise/100}.${product.prise%100}</td>
-                <td><a href="<c:url value='/edit/${product.id}'/>">">Edit</a> </td>"
-                <td><a href="<c:url value='/remove/${product.id}'/>">">Delete</a> </td>"
+                <td><a href="<c:url value='/edit/${product.id}'/>">">Edit</a></td>
+                "
+                <td><a href="<c:url value='/remove/${product.id}'/>">">Delete</a></td>
+                "
             </tr>
         </c:forEach>
     </table>
@@ -88,6 +90,28 @@
 
 <c:url var="addAction" value="/products/add.form">
 
+    <form:form action="${addAction}" commandName="product">
+        <table>
+            <c:if test="${!empty product.productName}">
+                <tr>
+                    <td>
+                        <form:label path="id">
+                            <spring:message text="ID"/>
+                        </form:label>
+                    </td>
+                    <td>
+                        <form:input path="id" readonly="true" size="8" disabled="true"/>
+                        <form:hidden path="id"/>
+                    </td>
+                </tr>
+            </c:if>
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+        </table>
+    </form:form>
 </c:url>
 </body>
 </html>
