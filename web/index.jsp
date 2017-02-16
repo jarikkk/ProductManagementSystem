@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
@@ -5,7 +6,7 @@
   </head>
   <h3>Product Management System presents</h3>
   </br>
-  <a href="/products" target="_blank">Product list</a>
+  <a href="<c:url value="/products"/>" target="_blank">Product list</a>
   </br>
   </body>
 </html>
