@@ -52,7 +52,7 @@
     <title>Title</title>
 </head>
 <body>
-<a href="../../index.jsp">Back to main menu</a>
+<a href="../../../src/main/webapp/index.jsp">Back to main menu</a>
 
 <br/>
 <br/>
