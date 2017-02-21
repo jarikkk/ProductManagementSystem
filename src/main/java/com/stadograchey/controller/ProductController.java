@@ -1,6 +1,6 @@
-package controller;
+package com.stadograchey.controller;
 
-import model.Product;
+import com.stadograchey.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import service.ProductService;
+import com.stadograchey.service.ProductService;
 
 @Controller
 public class ProductController {

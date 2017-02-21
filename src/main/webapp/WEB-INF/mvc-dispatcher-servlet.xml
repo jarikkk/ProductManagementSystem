@@ -7,7 +7,8 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-    <context:component-scan base-package="java"/>
+
+    <context:component-scan base-package="com.stadograchey"/>
 
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -30,7 +31,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>model.Product</value>
+                <value>com.stadograchey.stadograchey.controller.model.Product</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -43,15 +44,15 @@
     </bean>
 
     <!--BookDao and BookService beans-->
-    <bean id="productDao" class="dao.ProductDaoImpl">
+    <bean id="productDao" class="com.stadograchey.dao.ProductDaoImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="productService" class="service.ProductServiceImpl">
+    <bean id="productService" class="com.stadograchey.service.ProductServiceImpl">
         <property name="productDao" ref="productDao"/>
     </bean>
 
-    <context:component-scan base-package="java"/>
+    <context:component-scan base-package="com.stadograchey"/>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
