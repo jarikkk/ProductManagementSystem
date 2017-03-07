@@ -7,8 +7,8 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-
     <context:component-scan base-package="com.stadograchey"/>
+
 
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -31,12 +31,12 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>com.stadograchey.stadograchey.controller.model.Product</value>
+                <value>com.stadograchey.model.Product</value>
             </list>
         </property>
         <property name="hibernateProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL91Dialect
                 </prop>
                 <prop key="hibernate.show_sql">true</prop>
             </props>
