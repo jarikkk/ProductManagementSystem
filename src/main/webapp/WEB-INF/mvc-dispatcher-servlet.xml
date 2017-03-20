@@ -52,6 +52,8 @@
         <property name="productDao" ref="productDao"/>
     </bean>
 
+
+
     <context:component-scan base-package="com.stadograchey"/>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
